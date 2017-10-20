@@ -29,6 +29,6 @@ describe('Creating Todos', () => {
         expect(todos[0].text).toBe(text);
         done();
       }).catch((e) => done(e));
-    })
+    });
   });
 });

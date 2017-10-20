@@ -7,4 +7,5 @@ module.exports = (app) => {
 
   app.post('/api/todos', todoCtrl.createTodo);
   app.get('/api/todos', todoCtrl.listTodo)
+  app.get('/api/todos/:id', todoCtrl.getTodoById)
 }

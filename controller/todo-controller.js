@@ -23,7 +23,11 @@ module.exports = {
     })
   },
 
-  getTodoById(id, req, res) {
-    
+  getTodoById( req, res) {
+    Todo.findById(req.params.id).then((todo)=>{
+      res.status(200).send(todo);
+    }, (error)=>{
+      res.status(400).send(error);
+    })
   }
 }
