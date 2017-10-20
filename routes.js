@@ -5,5 +5,6 @@ module.exports = (app) => {
     res.send("<h1>Welcome to Todos API Node Mongo Express App!</h1>")
   });
 
-  app.post('/api/todo', todoCtrl.createTodo);
+  app.post('/api/todos', todoCtrl.createTodo);
+  app.get('/api/todos', todoCtrl.listTodo)
 }

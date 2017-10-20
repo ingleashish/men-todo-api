@@ -14,4 +14,16 @@ module.exports = {
       console.log("Error occured", error);
     });
   },
+
+  listTodo(req, res) {
+    Todo.find().then((allTodo)=>{
+      res.status(200).send(allTodo);
+    }, (error)=>{
+      res.status(400).send(error);
+    })
+  },
+
+  getTodoById(id, req, res) {
+    
+  }
 }
