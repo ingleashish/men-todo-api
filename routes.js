@@ -6,6 +6,8 @@ module.exports = (app) => {
   });
 
   app.post('/api/todos', todoCtrl.createTodo);
-  app.get('/api/todos', todoCtrl.listTodo)
-  app.get('/api/todos/:id', todoCtrl.getTodoById)
+  app.get('/api/todos', todoCtrl.listTodo);
+  app.get('/api/todos/:id', todoCtrl.getTodoById);
+  app.delete('/api/todos/:id', todoCtrl.deleteTodo);
+  app.patch('/api/todos/:id', todoCtrl.updateTodo);
 }
