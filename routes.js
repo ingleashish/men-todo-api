@@ -1,4 +1,5 @@
-todoCtrl = require("./controller/todo-controller");
+const todoCtrl = require("./controller/todo-controller");
+const userCtrl = require("./controller/user-controller");
 
 module.exports = (app) => {
   app.get('/api', (req, res) => {
@@ -10,4 +11,5 @@ module.exports = (app) => {
   app.get('/api/todos/:id', todoCtrl.getTodoById);
   app.delete('/api/todos/:id', todoCtrl.deleteTodo);
   app.patch('/api/todos/:id', todoCtrl.updateTodo);
+  app.post('/api/users', userCtrl.createUser);
 }
